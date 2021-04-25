@@ -1,0 +1,114 @@
+//heading
+.heading-p {
+    color: var(--color-p);
+    font-size: 4rem;
+    font-weight: 700;
+    @include phone-big {
+        font-size: 3rem;
+    }
+}
+
+.heading-s {
+    font-size: 3.5rem;
+    @include phone-big {
+        font-size: 2.5rem;
+    }
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 10rem;
+        background-color: #000;
+        margin: 0 auto;
+        opacity: .1;
+        margin-top: 1rem;
+    }
+}
+
+.heading-t {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+
+    @include tablet-land {
+        font-size: 2rem;
+    }
+    @include phone-big {
+        font-size: 1.8rem;
+    }
+}
+
+.heading-4 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+//paragraph
+.paragraph-1 {
+    font-size: 1.8rem;
+}
+
+.paragraph-2 {
+    font-size: 1.6rem;
+}
+
+//button
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+
+    &:link,
+    &:visited {
+        color: var(--color-p);
+        padding: 2rem 5rem;
+        border-radius: .5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &:hover,
+    &:active {
+
+    }
+
+    &--work {
+        &:link,
+        &:visited {
+            background-color: var(--color-btn1);
+            box-shadow: 3px .5rem var(--color-btn1-dark);
+        }
+
+        &:hover,
+        &:active {
+            background-color: var(--color-btn1-dark);
+        }
+    }
+
+    &--load-more {
+        &:link,
+        &:visited {
+                background-color: var(--color-btn2);
+                box-shadow: 3px .5rem var(--color-btn2-dark);
+            }
+
+        &:hover,
+        &:active {
+            background-color: var(--color-btn2-dark);
+        }
+    }
+
+    &--form {
+        &:link,
+        &:visited {
+                background-color: var(--color-btn3);
+                box-shadow: 3px .5rem var(--color-btn3-dark);
+            }
+
+        &:hover,
+        &:active {
+            background-color: var(--color-btn3-dark);
+        }
+    }
+}

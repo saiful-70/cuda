@@ -1,0 +1,26 @@
+.footer {
+    margin: 0;
+    background-color: var(--color-form);
+    height: 15vh;
+    overflow: hidden;
+    
+    &__social {
+        height: 100%;
+            @include common-flex;
+            @include phone-big {
+                flex-wrap: wrap;
+            }
+
+        &--item {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            a {
+                color: var(--color-p);
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+:root {
+    --color-p : #fff; //p for primary
+
+    --color-s : #3c4761; // s for scondary
+
+    --color-b : #3bb5e2; //b for dark
+    
+    --color-b1 : #87509c; //b for background
+    --color-b1-dark : #4f2d5c;
+    --color-b2 : #17c2a4;
+    --color-b3 : #e7f1f8;
+    --color-b4 : #a0eeeb;
+    --color-b5 : #ffdd99;
+    --color-b6 : #d74680;
+    --color-b7 : #3c5499;
+    --color-b8 : #344b8e;
+
+    --color-btn1 : #eb7d48;
+    --color-btn1-dark : #ca6735;
+    --color-btn2 : #17c2a4;
+    --color-btn2-dark : #0e816c;
+    --color-btn3 : #30bae7;
+    --color-btn3-dark : #0883ac;
+
+    --color-form : #312a72;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing : inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    position: relative;
+
+    @include tablet-land {
+        font-size: 56.25%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    // display: grid;
+    // grid-template-rows: repeat(min-content, 8);
+}
+
+ul {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}

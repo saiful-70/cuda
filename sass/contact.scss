@@ -1,0 +1,88 @@
+.contact {
+    @include common-section;
+    grid-template-rows: repeat(2, min-content);
+    height: 85vh;
+    background-color: var(--color-b7);
+    color: var(--color-p);
+    justify-items: center;
+    gap: 3rem 0;
+    @include tablet-land {
+        gap: 2rem 0;
+    }
+
+    &__head {
+        @include common-section-head;
+    }
+
+
+    .form {
+        grid-column: 1/-1;
+        margin: 0 auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-between;
+        max-width: 80%;
+        @include phone-big {
+            max-width: 70%;
+        }
+        // flex-direction: column;
+        // width: 4/10;
+
+        &__input {
+            flex-basis: 49%;
+            @include phone-big {
+                flex-basis: 100%;
+            }
+            &:not(:first-child) {
+                margin-left: 2%;
+                @include phone-big {
+                    margin: 0;
+                    margin-top: 2rem;
+                }
+            }
+            &--name,
+            &--email {
+                width: 100%;
+                height: 5rem;
+                border-radius: .5rem;
+                background-color: var(--color-form);
+                border: none;
+                color: var(--color-p);
+                padding-left: 1rem;
+                font-size: 2rem;
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid #fff;
+                }
+            }
+        }
+
+        &__textarea {
+            width: 100%;
+            margin-top: 2rem;
+
+            textarea {
+                border-radius: .5rem;
+                background-color: var(--color-form);
+                width: 100%;
+                height: 20rem;
+                font-size: 1.6rem;
+                padding: 1rem;
+                color: var(--color-p);
+                border: none;
+                resize: none;
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid #fff;
+                }
+            }
+        }
+
+        .btn {
+            margin: 2rem auto;
+        }
+    }
+}

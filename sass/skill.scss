@@ -1,0 +1,33 @@
+.skill {
+    @include common-section;
+    background-color: var(--color-b4);
+    color: var(--color-s);
+
+    &__head {
+        @include common-section-head;
+    }
+
+    &__progress {
+        @include common-flex-and-grid;
+        text-align: center;
+        // padding: 4rem 6rem;
+
+        &--1 {
+            grid-column: 3 / span 2;
+        }
+
+        &--1,
+        &--3 {
+            @include tablet-port {
+                grid-column: 3 / span 3;
+            }
+        }
+        &--2,
+        &--4 {
+            @include tablet-port {
+                grid-column: 8 / span 3;
+            }
+        }
+    }
+}
+
